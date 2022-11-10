@@ -1,0 +1,22 @@
+{{>layouts/header}}
+{{#article}}
+
+    <div id="all">
+        <div class="container">
+        <ul>
+            <li><input class="fidx" type="hidden" name="fidx">{{id}}</li>
+
+            <li><h2 class="title">{{title}}</h2></li>
+
+            <li><pre class="content">{{content}}</pre></li>
+
+        </ul>
+        </div>
+
+    <div class="detailbtn">
+        <a href="/articles/{{id}}/edit" class="btn btn-primary">Edit</a>
+        <a href="/articles/{{id}}/delete" class="btn btn-danger">Delete</a>
+    </div>
+    {{/article}}
+</div>
+{{>layouts/footer}}
