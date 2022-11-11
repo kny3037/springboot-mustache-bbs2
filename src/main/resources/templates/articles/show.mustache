@@ -1,6 +1,8 @@
 {{>layouts/header}}
 {{#article}}
 
+    <link rel="stylesheet" href="/css/detail.css">
+
     <div id="all">
         <div class="container">
         <ul>
@@ -16,7 +18,7 @@
     <div class="detailbtn">
         <a href="/articles/{{id}}/edit" class="btn btn-primary">Edit</a>
         <a href="/articles/{{id}}/delete" class="btn btn-danger">Delete</a>
-        <a href="/articles">back</a>
+        <a href="/articles" class="btn btn-primary">back</a>
     </div>
     {{/article}}
 </div>
