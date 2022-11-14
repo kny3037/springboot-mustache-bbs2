@@ -30,7 +30,32 @@ class HospitalRepositoryTest {
         for (var hospital : hospitals) {
             System.out.println(hospital.getHospitalName());
         }
+    }
 
+    @Test
+    void containing() {
+        List<Hospital> hospitals = hospitalRepository.findByRoadNameAddressContaining("송파구");
+        printHospitalNameAndAddress(hospitals);
+    }
+
+    @Test
+    void startWith() {
+        List<Hospital> hospitals = hospitalRepository.findByHospitalNameStartsWith("경희");
+        printHospitalNameAndAddress(hospitals);
+    }
+
+    @Test
+    void endsWith() {
+        List<Hospital> hospitals = hospitalRepository.findByHospitalNameEndsWith("병원");
+        printHospitalNameAndAddress(hospitals);
+    }
+
+    void printHospitalNameAndAddress(List<Hospital> hospitals) {
+        for (var hospital : hospitals) {
+            System.out.printf("%s | %s %f\n", hospital.getHospitalName(), hospital.getRoadNameAddress(), hospital.getTotalAreaSize());
+        }
+
+        System.out.println(hospitals.size());
     }
 
     @Test
