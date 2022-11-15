@@ -2,6 +2,7 @@ package com.mustache.bbs2.domain.entity;
 
 import com.mustache.bbs2.domain.dto.HospitalResponse;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,6 +25,7 @@ public class Hospital {
     private Integer patientRoomCount;
     private Integer totalNumberOfBeds;
     private String businessTypeName;
+    private Integer businessStatusCode;
     private Float totalAreaSize;
 
     // HospitalEntity를 HospitalResponse Dto로 만들어주는 부분
