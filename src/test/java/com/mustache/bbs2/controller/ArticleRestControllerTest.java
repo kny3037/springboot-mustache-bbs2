@@ -42,7 +42,7 @@ class ArticleRestControllerTest {
         Long id = 1l;
 
         given(articleService.getArticleById(id))
-                .willReturn(new ArticleDto(1l, "ㅁㄴㅇㄹ", "ㅁㄴㅇㄹ"));
+                .willReturn(new ArticleDto(1l, "제목입니다.", "내용입니다."));
 
         mockMvc.perform(get("/api/v1/articles/1"))
                 .andExpect(status().isOk())
