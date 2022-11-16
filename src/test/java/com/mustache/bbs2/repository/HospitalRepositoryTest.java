@@ -58,6 +58,18 @@ class HospitalRepositoryTest {
         System.out.println(hospitals.size());
     }
 
+    /*@Test
+    void findByPatientRoomCountAndPatientRoomCount() {
+        List<Hospital> hospitals = hospitalRepository.findByPatientRoomCountGreaterThanAndPatientRoomCountLessThan(10,20);
+        printHospitalNameAndAddress(hospitals);
+    }*/
+
+    @Test
+    void findByPatientRoomCountBetween() {
+        List<Hospital> hospitals = hospitalRepository.findByPatientRoomCountBetween(10,20);
+        printHospitalNameAndAddress(hospitals);
+    }
+
     @Test
     void findById() {
         Optional<Hospital> hospital = hospitalRepository.findById(1);
