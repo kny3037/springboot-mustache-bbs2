@@ -1,4 +1,17 @@
 {{>layouts/header}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/search.css">
+
+<form action="/hospitals" method="get">
+    <div class="search-box">
+        <input class="search-txt" type="text" name="keyword" placeholder="검색어를 입력해 주세요"/>
+        <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</form>
+
+
 <table class="table table-hover">
     <thead>
     <tr>
