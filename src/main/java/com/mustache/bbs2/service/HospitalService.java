@@ -19,6 +19,7 @@ public class HospitalService {
         Optional<Hospital> optHospital = hospitalRepository.findById(id); // Entity
         Hospital hospital = optHospital.get();
         HospitalResponse hospitalResponse = Hospital.of(hospital); // DTO
+
         if (hospital.getBusinessStatusCode() == 13) {
             hospitalResponse.setBusinessStatusName("영업중");
         } else if (hospital.getBusinessStatusCode() == 3) {
