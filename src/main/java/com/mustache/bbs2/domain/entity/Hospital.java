@@ -1,8 +1,7 @@
 package com.mustache.bbs2.domain.entity;
 
 import com.mustache.bbs2.domain.dto.HospitalResponse;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +10,10 @@ import javax.persistence.Table;
 
 @Entity
 @Getter
+@Builder
 @Table(name = "nation_wide_hospitals")  //hospital이라는 테이블이 아님.
+@NoArgsConstructor
+@AllArgsConstructor
 public class Hospital {
 
     @Id //GeneratedValue안씀
