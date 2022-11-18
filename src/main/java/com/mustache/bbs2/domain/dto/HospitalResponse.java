@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.security.SecureRandom;
 
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
