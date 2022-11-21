@@ -35,4 +35,8 @@ public class HospitalRestController{
 // "hospitalName":"노소아청소년과의원","patientRoomCount":0,"totalNumberOfBeds":0,"businessTypeName":
 // "의원","totalAreaSize":0.0}
 
+
+
+
+
 }
