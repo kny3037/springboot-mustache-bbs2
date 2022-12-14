@@ -9,9 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/hospital")
@@ -35,7 +33,7 @@ public class HospitalController {
     }
 
     @GetMapping("")
-    public String searchList(@RequestParam(required = false) String keyword, Pageable pageable, Model model) {
+    public String searchList(@RequestParam(required = false)  String keyword, Pageable pageable, Model model) {
         // keyword는 어떻게 받을 것인가?
         log.info("keyword:{}", keyword);
         Page<Hospital> hospitals = hospitalRepository.findByRoadNameAddressContaining(keyword, pageable);
