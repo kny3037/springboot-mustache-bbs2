@@ -1,6 +1,7 @@
 package com.mustache.bbs2.domain.entity;
 
 
+import com.mustache.bbs2.domain.dto.VisitResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Visit {
+public class Visit extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +33,12 @@ public class Visit {
 
     private float amount;
 
+    public VisitResponse toResponse() {
+        return VisitResponse.builder()
+                .hospitalName(this.hospital.getHospitalName())
+                .userName(this.user.getUserName())
+                .disease(this.disease)
+                .amount(this.amount)
+                .build();
+    }
 }
